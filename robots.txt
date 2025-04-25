@@ -1,0 +1,14 @@
+User-agent: * Allow: /
+Allow: /head-usa.html 
+Allow: /head-gb.html 
+Allow: /head-canada.html 
+Allow: /head-poland.html 
+Allow: /head-japan.html 
+Allow: /head-new-zealand.html 
+Allow: /head-phl.html 
+Allow: /head-china.html 
+Allow: /insurance.html 
+Allow: /about.html 
+Disallow: /contact.html
+
+Sitemap: https://mywiza.com.ua/sitemap.xml
