@@ -914,6 +914,9 @@ a.dtbtn_modal:hover {
 .slider_btn {
     margin-top: 55px;
 }
+.witr_btn_style{
+   
+}
 /* slider video button */
 .witr_video_btn {
     font-size: 18px;
@@ -4344,3 +4347,7 @@ textarea{
     
     padding: 10px;
 }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px ;
+  }
