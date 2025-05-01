@@ -3637,7 +3637,7 @@ p.form-messege {
 .portfolio_nav {
     padding: 0px 0 45px;
 }
-.portfolio_nav ul {}
+
  .portfolio_nav ul li {
     display: inline;
 }
@@ -3660,7 +3660,7 @@ p.form-messege {
     overflow: hidden;
     margin-bottom:30px;
 }
-.prot_thumb {} .prot_thumb img {
+ .prot_thumb img {
     display: block;
     transform: scale(1);
     transition: all 0.5s ease 0s;
@@ -3748,7 +3748,7 @@ p.form-messege {
     margin-bottom: 0px;
 }
 /* load button css */
-.gallery_load_button {} .gallery_load_button a {
+ .gallery_load_button a {
     padding: 7px 15px;
     display: inline-block;
     font-size: 17px;
@@ -3762,7 +3762,7 @@ p.form-messege {
     height: 465px;
     width: 100%;
 }
-.prots-contentg p {} 
+ 
 /*style 1 */
 .em_port_content {
     height: 100%;
@@ -3832,7 +3832,7 @@ p.form-messege {
 .porttitle_inner4 h3 {
     margin: 0;
 }
-.porttitle_inner4 h3 a {}
+
 .porttitle_inner4 p {
 	margin-bottom: 0;	
 }
@@ -3953,8 +3953,7 @@ ul.page-numbers a.page-numbers {
 .pstyle_1 .porttitle_inner h3 {
     padding-bottom: 0px;
 }
-.pstyle_1 .porttitle_inner h3 a {} .pstyle_1 .porttitle_inner p {
-}
+
 .pstyle_1 .prot_content p {
     margin: 2px 0 0;
 }
@@ -4230,6 +4229,7 @@ ul.page-numbers a.page-numbers {
 }
   
 .new-btn{
+    display: block;
     color: #FFFFFF;
     background-color: #202D4D;
     width: 268px;

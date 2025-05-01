@@ -5,11 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = strip_tags(trim($_POST["name"]));
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
     $phone = strip_tags(trim($_POST["phone"]));
-    $subject = strip_tags(trim($_POST["subject"]));
-    $description = strip_tags(trim($_POST["description"]));
+
 
     // Перевірка на обов'язкові поля
-    if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($phone) || empty($subject) || empty($description)) {
+    if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($phone) ) {
         http_response_code(400);
         echo "Будь ласка, заповніть усі обов'язкові поля.";
         exit;
@@ -21,8 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_content = "Ім'я: $name\n";
     $email_content .= "Електронна адреса: $email\n";
     $email_content .= "Номер телефону: $phone\n";
-    $email_content .= "Тема: $subject\n";
-    $email_content .= "Короткий опис:\n$description\n";
+  
 
     $email_headers = "From: $name <$email>";
 
