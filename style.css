@@ -32,6 +32,7 @@ Table Of Content
 
 
 */
+
 .witr_ds_content {
     background-image :  url(assets/images/slider1.webp)  
 }
@@ -914,9 +915,7 @@ a.dtbtn_modal:hover {
 .slider_btn {
     margin-top: 55px;
 }
-.witr_btn_style{
-   
-}
+
 /* slider video button */
 .witr_video_btn {
     font-size: 18px;

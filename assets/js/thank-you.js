@@ -1,28 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document
-    .getElementById("submitButton")
-    .addEventListener("click", function () {
-      // Масив із ID полів, які потрібно перевірити
-      const requiredFields = ["name"];
-      let allFilled = true;
+jQuery(document).ready(function ($) {
+  $("#submitButton").click(function (event) {
+    event.preventDefault(); // Запобігаємо стандартному надсиланню
 
-      requiredFields.forEach((field) => {
-        const input = document.getElementById(field);
-        if (!input || input.value.trim() === "") {
-          allFilled = false;
-        }
-      });
+    var name = $("#name").val().trim();
+    var email = $("#email").val().trim();
+    var phone = $("#phone").val().trim();
 
-      if (allFilled) {
-        // Відкриваємо нову сторінку
-        let newTab = window.open("thank_you.html", "_blank");
+    // Перевірка заповнення всіх полів
+    if (name === "" || email === "" || phone === "") {
+      $(".form-messege")
+        .text("Будь ласка, заповніть всі поля перед надсиланням!")
+        .css("color", "red");
+      return;
+    }
 
-        // Закриваємо її через 5 секунд
-        setTimeout(() => {
-          newTab.close();
-        }, 5000);
-      } else {
-        alert("Будь ласка, заповніть усі обов'язкові поля!");
-      }
-    });
+    // Перевірка коректності email
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      $(".form-messege")
+        .text("Введіть коректну електронну пошту!")
+        .css("color", "red");
+      return;
+    }
+
+    // Отримання URL сторінки
+    var currentPage = window.location.pathname;
+    var thankYouUrl = `thank_you.html?page=${encodeURIComponent(currentPage)}`;
+
+    var newTab = window.open(thankYouUrl, "_blank");
+
+    setTimeout(function () {
+      newTab.close();
+    }, 10000);
+
+    // Повідомлення про успішне надсилання
+    $(".form-messege")
+      .text("Дякуємо! Ваша заявка надіслана.")
+      .css("color", "green");
+  });
 });
