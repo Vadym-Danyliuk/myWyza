@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
   $("#submitButton").click(function (event) {
-    event.preventDefault(); // Запобігаємо стандартному надсиланню
+    event.preventDefault(); // Запобігаємо стандартному надсиланню форми
 
     var name = $("#name").val().trim();
     var email = $("#email").val().trim();
@@ -27,15 +27,42 @@ jQuery(document).ready(function ($) {
     var currentPage = window.location.pathname;
     var thankYouUrl = `thank_you.html?page=${encodeURIComponent(currentPage)}`;
 
+    // Відкриття сторінки у новій вкладці
     var newTab = window.open(thankYouUrl, "_blank");
 
-    setTimeout(function () {
-      newTab.close();
-    }, 1000);
+    // Відправка форми через AJAX для отримання відповіді
+    $.ajax({
+      type: "POST",
+      url: "mail.php",
+      data: $("#contact-form").serialize(),
+      success: function (response) {
+        try {
+          // Обробка відповіді як JSON
+          var result =
+            typeof response === "string" ? JSON.parse(response) : response;
 
-    // Повідомлення про успішне надсилання
-    $(".form-messege")
-      .text("Дякуємо! Ваша заявка надіслана.")
-      .css("color", "green");
+          // Вивід реального тексту повідомлення
+          $(".form-messege")
+            .text(result.message)
+            .css("color", result.status === "success" ? "green" : "red");
+
+          if (result.status === "success") {
+            // Закриття нової вкладки через певний інтервал (3 сек)
+            setTimeout(function () {
+              newTab.close();
+            }, 3000);
+          }
+        } catch (e) {
+          $(".form-messege")
+            .text("Помилка обробки відповіді!")
+            .css("color", "red");
+        }
+      },
+      error: function () {
+        $(".form-messege")
+          .text("Помилка сервера! Спробуйте пізніше.")
+          .css("color", "red");
+      },
+    });
   });
 });
