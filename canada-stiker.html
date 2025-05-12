@@ -488,30 +488,26 @@
                         <h2>Форма Для Консультації</h2>
                      </div>
                      <div class="witr_apartment_form">
-                        <form action="form-mail.php" method="post" id="contact-form">
+                        <form action="form-mail.php" method="post" id="contact-form1">
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="text" name="name" placeholder="Імя">
+                                    <input type="text1" id="name1" name="name1" placeholder="Імя">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="number" name="number" placeholder="Телефон">
+                                    <input type="phone1" id="phone1" name="phone" placeholder="Телефон">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="email" name="email" placeholder="Пошта">
+                                    <input type="email1" id="email1" name="email1" placeholder="Пошта">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
                                     <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control">
-                                       <option value="Choose Wiza...">Турисстична Wiza</option>
-                                       <option value="Working Wiza">BRP Wiza</option>
-                                       <option value="Study Wiza">Гостьова Wiza</option>
-                                       <option value="Бізнес Wiza">Для Навчання</option>
                                        <option value="Tourist Wiza">Вклейка Wiza</option>
                                     </select>
                                  </div>
@@ -520,27 +516,15 @@
                                  <div class="twr_form_box ">
                                     <textarea name="comment" placeholder="Що вас цікавить?"></textarea>
                                  </div>
-                                 <button type="submit" name="ok" class="btn">Надіслати</button>
+                                 <button id="submitButton2" type="submit" name="ok" class="btn">Надіслати</button>
                               </div>
                               <div class="col-lg-12 text-center">
-                                 <p class="form-messege"></p>
+                                 <p class="form-messege2"></p>
                               </div>
                            </div>
                         </form>
                      </div>
                   </div>
-                  <!-- <div class="bottom_department_list_inner">
-                     <div class="departmentList all_list_color">
-                        <h3>Education Coaching</h3>
-                        <ul>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> TOEFL </span></li>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> PTE Coaching </span></li>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> Take IELTS </span></li>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> Take IELTS </span></li>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> SAT Coaching </span></li>
-                           <li> <span> <i class="fas fa-angle-double-right"></i> Skills Exam </span></li>
-                        </ul>
-                     </div> -->
                </div>
             </div>
          </div>
@@ -729,6 +713,7 @@
    <script src="assets/js/theme.js"></script>
    <script src="https://cdn.pulse.is/livechat/loader.js" data-live-chat-id="67360575951dea25ee0bd324" async></script>
    <script src="./assets/js/thank-you.js"></script>
+   <script src="./assets/js/thankYou.js"></script>
 </body>
 
 </html>

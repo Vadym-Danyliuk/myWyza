@@ -1,14 +1,14 @@
 jQuery(document).ready(function ($) {
-  $("#submitButton").click(function (event) {
+  $("#submitButton2").click(function (event) {
     event.preventDefault(); // Запобігаємо стандартному надсиланню
 
-    var name = $("#name").val().trim();
-    var email = $("#email").val().trim();
-    var phone = $("#phone").val().trim();
+    var name = $("#name1").val().trim();
+    var email = $("#email1").val().trim();
+    var phone = $("#phone1").val().trim();
 
     // Перевірка заповнення всіх полів
     if (name === "" || email === "" || phone === "") {
-      $(".form-messege")
+      $(".form-messege2")
         .text("Будь ласка, заповніть всі поля перед надсиланням!")
         .css("color", "red");
       return;
@@ -17,7 +17,7 @@ jQuery(document).ready(function ($) {
     // Перевірка коректності email
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
-      $(".form-messege")
+      $(".form-messege2")
         .text("Введіть коректну електронну пошту!")
         .css("color", "red");
       return;
@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
     }, 1000);
 
     // Повідомлення про успішне надсилання
-    $(".form-messege")
+    $(".form-messege2")
       .text("Дякуємо! Ваша заявка надіслана.")
       .css("color", "green");
   });
