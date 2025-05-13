@@ -2770,6 +2770,15 @@ button:focus {
     position: relative;
     background-size: cover;
 }
+.breadcumb-area_inner{
+      background: url("assets/images/allBaner.webp") no-repeat center top/cover;
+    padding: 140px 0px 138px;
+    background-position: right;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+  
+}
 .breadcumb-area_japan {
     background: url("assets/images/headjapan.svg") no-repeat center top/cover;
     padding: 140px 0px 138px;
@@ -2859,6 +2868,18 @@ button:focus {
     position: relative;
     background-size: auto;
 }
+@media (max-width: 991px) {
+    .breadcumb-area_inner{
+        background: url("assets/images/allBaner.webp") ;
+        padding: 140px 0px 138px;
+        background-position: right;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: auto;
+    }
+
+}
+
 @media (max-width: 991px) {
     .breadcumb-area_newzel{
         background: url("assets/images/newzealandmob.svg") ;

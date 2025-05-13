@@ -586,22 +586,6 @@
             </div>
             <div class="col-lg-4 col-md-4">
                <div class="Wiza_department_list_inner">
-                  <!-- <div class="departmentList all_list_color">
-                     <h3>Інші візи</h3>
-                     <ul>
-                        <a href="pl-job.html">
-                           <li><span><i class="fas fa-angle-double-right"></i> Робоча wiza</span></li>
-                        </a>
-                        <a href="pl-students.html">
-                           <li><span><i class="fas fa-angle-double-right"></i> СтудентськаWiza</span></li>
-                        </a>
-                        <a href="job-poland.html">
-                           <li><span><i class="fas fa-angle-double-right"></i> Робота в Польщі</span></li>
-                        </a>
-
-
-                     </ul>
-                  </div> -->
                   <div class="apartment_area">
                      <div class="apartment_text">
                         <h2>Форма Для Консультації</h2>
@@ -611,29 +595,31 @@
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="text1" id="name1" name="name1" placeholder="Імя">
+                                    <input type="text" id="name1" name="name1" required placeholder="Ім'я">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="phone1" id="phone1" name="phone" placeholder="Телефон">
+                                    <input type="tel" id="phone1" name="phone1" required placeholder="Телефон">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="email1" id="email1" name="email1" placeholder="Пошта">
+                                    <input type="email" id="email1" name="email1" required placeholder="Пошта">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control">
+                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control"
+                                       required>
+                                       <option value="">Оберіть Країну</option>
+                                       <option value="Philippines Touristic">Вакансії в Польші</option>
 
-                                       <option value="Poland work">Робота в Польщі</option>
                                     </select>
                                  </div>
                               </div>
                               <div class="col-lg-12 col-md-12">
-                                 <div class="twr_form_box ">
+                                 <div class="twr_form_box">
                                     <textarea name="comment" placeholder="Що вас цікавить?"></textarea>
                                  </div>
                                  <button id="submitButton2" type="submit" name="ok" class="btn">Надіслати</button>

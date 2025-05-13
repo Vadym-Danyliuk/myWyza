@@ -507,30 +507,34 @@
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="text1" id="name1" name="name1" placeholder="Імя">
+                                    <input type="text" id="name1" name="name1" required placeholder="Ім'я">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="phone1" id="phone1" name="phone" placeholder="Телефон">
+                                    <input type="tel" id="phone1" name="phone1" required placeholder="Телефон">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="email1" id="email1" name="email1" placeholder="Пошта">
+                                    <input type="email" id="email1" name="email1" required placeholder="Пошта">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control">
-
-                                       <option value="Бізнес Wiza">Для Навчання</option>
-
+                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control"
+                                       required>
+                                       <option value="">Оберіть тип візи</option>
+                                       <option value="Canada Touristic">Туристична Visa</option>
+                                       <option value="Canada Work">Робоча Visa</option>
+                                       <option value="Canada Pasting">Вклейка Visa</option>
+                                       <option value="Canada Teaching">Для Навчання Visa</option>
+                                       <option value="Canada Guest">Гостьова Visa</option>
                                     </select>
                                  </div>
                               </div>
                               <div class="col-lg-12 col-md-12">
-                                 <div class="twr_form_box ">
+                                 <div class="twr_form_box">
                                     <textarea name="comment" placeholder="Що вас цікавить?"></textarea>
                                  </div>
                                  <button id="submitButton2" type="submit" name="ok" class="btn">Надіслати</button>

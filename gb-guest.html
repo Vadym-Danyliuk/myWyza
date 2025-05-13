@@ -623,28 +623,35 @@
                            <div class="row">
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="text1" id="name1" name="name1" placeholder="Імя">
+                                    <input type="text" id="name1" name="name1" required placeholder="Ім'я">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="phone1" id="phone1" name="phone" placeholder="Телефон">
+                                    <input type="tel" id="phone1" name="phone1" required placeholder="Телефон">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <input type="email1" id="email1" name="email1" placeholder="Пошта">
+                                    <input type="email" id="email1" name="email1" required placeholder="Пошта">
                                  </div>
                               </div>
                               <div class="col-lg-12">
                                  <div class="twr_form_box">
-                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control">
-                                       <option value="Guest Wiza">Гостьова Wiza</option>
+                                    <select name="ooselect" class="wpcf7-form-control wpcf7-select form-control"
+                                       required>
+                                       <option value="">Оберіть тип візи</option>
+                                       <option value="GB Touristic">Туристична Visa</option>
+                                       <option value="GB Guest">Гостьова Visa</option>
+                                       <option value="GB Business">Бізнес Visa</option>
+                                       <option value="GB Sport">Для Спортсменів Visa</option>
+                                       <option value="GB Teaching">Для Навчання Visa</option>
+                                       <option value="GB Pasting">Вклейка Visa</option>
                                     </select>
                                  </div>
                               </div>
                               <div class="col-lg-12 col-md-12">
-                                 <div class="twr_form_box ">
+                                 <div class="twr_form_box">
                                     <textarea name="comment" placeholder="Що вас цікавить?"></textarea>
                                  </div>
                                  <button id="submitButton2" type="submit" name="ok" class="btn">Надіслати</button>
